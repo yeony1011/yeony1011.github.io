@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>http://www.blueb.co.kr</title>
+	<script type="text/javascript" src="/js/vendor/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+		(function($){
+
+			var layers    = [],
+				docWidth  = $(window).width(),
+				docHeight = $(window).height()
+
+			$(window).resize(function() {
+				docWidth  = $(window).width()
+				docHeight = $(window).height()
+			})
+
+			// Public Methods
+
+			// Add an object to the list of things to parallax
+			$.fn.plaxify = function (params){
+				var layer    = {"xRange":0,"yRange":0,"invert":false},
+					position = this.position()
+
+				for(var param in params){
+					if(layer[param]==0){
+						layer[param] = params[param]
+					}
+				}
+				layer.obj    = this
+				layer.startX = position.left
+				layer.startY = position.top
+
+				if(layer.invert == false){
+					layer.startX -= Math.floor(layer.xRange/2)
+					layer.startY -= Math.floor(layer.yRange/2)
+				} else {
+					layer.startX += Math.floor(layer.xRange/2)
+					layer.startY += Math.floor(layer.yRange/2)
+				}
+				layers.push(layer)
+			}
+
+
+			$.plax = {
+				listLayers: function(){
+					console.log(layers)
+				},
+				enable: function(){
+					$(document).mousemove(function(e){
+						var x      = e.pageX,
+							y      = e.pageY,
+							hRatio = Math.round((x/docWidth)*100)/100,
+							vRatio = Math.round((y/docHeight)*100)/100
+						$.each(layers, function(index,layer) {
+							if(layer.invert != true){
+								layer.obj.css('left',layer.startX + (layer.xRange*hRatio))
+								layer.obj.css('top', layer.startY + (layer.yRange*vRatio))
+							} else {
+								layer.obj.css('left',layer.startX - (layer.xRange*hRatio))
+								layer.obj.css('top', layer.startY - (layer.yRange*vRatio))
+							}
+						})
+					})
+				},
+				disable: function(){
+					clearTimeout(timer)
+				}
+			}
+
+		})(jQuery);
+	</script>
+
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+		}
+		body {
+			position: relative;
+		}
+		div#shell {
+			display: block;
+			position: relative;
+		}
+		div#shell{
+			z-index: 1;
+		}
+		#plax-logo {
+			position: absolute;
+			top: 125px;
+			left: 90px;
+			z-index: 3;
+		}
+		#plax-sphere-1 {
+			position: absolute;
+			z-index: 4;
+			top: 189px;
+			left: 191px;
+		}
+		#plax-sphere-2 {
+			position: absolute;
+			z-index: 2;
+			top: 49px;
+			left: 53px;
+		}
+		#plax-sphere-3 {
+			position: absolute;
+			top: 35px;
+			left: 32px;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+<div id="shell">
+	<img src="/data/201106/IJ13082080832980/plax_logo.png" width="136" height="70" id="plax-logo"/>
+	<img src="/data/201106/IJ13082080832980/plax_sphere_small.png" width="93" height="92" id="plax-sphere-1"/>
+	<!--<img src="/data/201106/IJ13082080832980/plax_sphere_large.png" width="215" height="215" id="plax-sphere-2"/>-->
+	<div id="plax-sphere-2" style="font-size:100px; background: #444;">SEUNG YEON</div>
+	<img src="/data/201106/IJ13082080832980/plax_sphere_small.png" width="93" height="92" id="plax-sphere-3"/>
+</div>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#plax-sphere-1').plaxify({"xRange":40,"yRange":40})
+		$('#plax-logo').plaxify({"xRange":20,"yRange":20})
+		$('#plax-sphere-2').plaxify({"xRange":10,"yRange":10})
+		$('#plax-sphere-3').plaxify({"xRange":40,"yRange":40,"invert":true})
+		$.plax.enable();
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="/css/style.min.css">
+	<script src="/js/vendor/jquery-1.12.4.min.js"></script>
+	<script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+	<script src="/js/vendor/plax.js"></script>
+	<script src="/js/vendor/swiper.min.js"></script>
+	<script src="/js/vendor/masonry.pkgd.min.js"></script>
+	<script src="/js/main.min.js"></script>
+	<title>메인 | Yeony</title>
+</head>
+<body>
+	<header id="header">
+		<div class="inner flex between">
+			<h1><a href="/" class="logo">Yeony</a></h1>
+			<button type="button" class="menu"><span>메뉴</span></button>
+		</div>
+	</header>
+	<nav id="menu">
+		<h1><a href="#this" class="logo">Yeony</a></h1>
+		<button type="button" class="close">닫기</button>
+		<div class="inner flex between">
+			<div class="menuCont">
+				<p>More about I?</p>
+				<p>My works.</p>
+				<p>Things I study.</p>
+				<p>Call me if you want to know me.</p>
+			</div>
+			<div class="navi">
+				<ul>
+					<li class="menuBox">
+						<a href="#this" class="menuLink">About</a>
+						<div class="dropDown">
+							<a href="/html/about/profile.html">프로필</a>
+							<a href="/html/about/career.html">경력</a>
+							<a href="/html/about/introduction.html">자기소개서</a>
+							<a href="/html/about/resume.html">이력서</a>
+						</div>
+					</li>
+					<li class="menuBox">
+						<a href="#this" class="menuLink">Portfolio</a>
+						<div class="dropDown">
+							<a href="/html/portfolio/portfolio.html">포트폴리오</a>
+							<a href="/html/portfolio/award.html" style="padding:4px 0;">어워드</a>
+						</div>
+					</li>
+					<li class="menuBox">
+						<a href="#this" class="menuLink">Education</a>
+						<div class="dropDown">
+							<a href="/html/education/seminar.html">세미나</a>
+							<a href="/html/education/study.html">스터디</a>
+						</div>
+					</li>
+					<li class="menuBox">
+						<a href="/html/contact/contact.html" class="menuLink">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div id="container">
+		<div class="bg1"></div>
+		<div class="bg2"></div>
+		<section class="main">
+			<h1 class="mainTit"><i>S</i>EUNG YEON</h1>
+		</section>
+	</div>
+	<footer id="footer">
+		<small class="copyright">© 2018 Seung-yeon</small>
+	</footer>
+	<script>
+		$(document).ready(function () {
+			/* 메인 */
+			$(".bg1").plaxify({"xRange":10, "yRange":10});
+			$(".bg2").plaxify({"xRange":40, "yRange":40, "invert":true});
+			$(".main").plaxify({"xRange":20, "yRange":20});
+			$.plax.enable();
+		});
+	</script>
+</body>
+</html>
