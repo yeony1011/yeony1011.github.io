@@ -6,17 +6,27 @@
 <body>
 <include src="../include/header.html"></include>
 <div id="container">
-	<section class="">
-		<h1 style="color:#fff;">프로필</h1>
-		<p style="color:#fff;">설명글</p>
-		<div></div>
-	</section>
+	<div class="wrap">
+		<div class="titBox">
+			<h1 class="largeTit">프로필</h1>
+			<p class="txt">프로필 상세</p>
+		</div>
+		<section class="section">
+			<h1 class="middleTit">About me.</h1>
+			<div class="inBox flex">
+				<div class="img"><img src="../../image/img/imgPeople.jpg" alt="조승연"></div>
+				<div class="textCont">
+					<strong>Just contact me :)</strong>
+					<ul class="dotList">
+						<li>이름 : 조승연</li>
+						<li>생년월일 : 92.10.11</li>
+						<li>거주지 : 인천</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</div>
 </div>
 <include src="../include/footer.html"></include>
-<script>
-	$(document).ready(function () {
-		console.log("프로필");
-	});
-</script>
 </body>
 </html>
