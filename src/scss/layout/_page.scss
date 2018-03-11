@@ -38,17 +38,79 @@
 }
 .section {
 	margin-top:50px;
-	.inBox {margin-top:10px;}
-	.textCont {margin-left:30px;}
+	.inBox {
+		margin-top:10px;
+		.img {margin-right:30px;}
+	}
+	.textCont {
+		span.txt {display:block;}
+		a.txt {
+			position:relative; display:inline-block;
+			&:before {
+				content:""; position:absolute; bottom:0; display:block;
+				width:100%; height:1px; background-color:transparent;
+			}
+			&:hover:before {background-color:$pink;}
+		}
+	}
 }
 
 .grid {
 	@include clearFix();
+	margin:0 35px;
 	&-item {
-		display:inline-block; width:20%; margin-bottom:10px; border:1px solid #877a6b; border-radius:3px;
-		a {
-			display:block; transition:border-color .3s;
-			&:hover {border-color:#543b1e;}
+		display:inline-block; width:24%; margin-bottom:10px;
+		border:1px solid $white; border-radius:3px; cursor:pointer;
+		.imgBox {
+			width:100%; height:100%; padding:10px; text-align:center; vertical-align:middle; box-sizing:border-box;
+			img {width:100%;}
 		}
+		.overBox {
+			display:none; position:absolute; top:0; right:0; bottom:0; left:0; margin:3px;
+			background:rgba(248, 54, 86, 0.65); text-align:center;
+			a {display:block;}
+			h2, span {color:$white;}
+			h2 {padding:100px 10px 20px; font-size:22px; font-weight:bold; line-height:32px;}
+			span {display:block; font-size:18px; font-weight:bold; line-height:22px;}
+		}
+	}
+}
+
+.borderBox {
+	padding: 15px; border:1px solid $gray;
+}
+
+.dotList {
+	> li {
+		padding-left:15px; font-size:13px; color:#fff; text-indent:-15px;
+		&:before {
+			content:""; position:relative; top:-1px; display:inline-block;
+			width:2px; height:2px; margin-right:12px;
+			background-color:$gray; vertical-align:middle;
+		}
+	}
+}
+
+.pop {
+	display:none; z-index:100; position:fixed; left:50%; width:500px; margin-left:-250px; padding-bottom:5px;
+	border:1px solid #bcbdc0; border-radius:5px; box-shadow:0px 0px 3px #ccc; background-color:#f96668;
+	.pHeader {
+		overflow:hidden; height:34px; padding:10px 0; border:none; background:none;
+		h3 {float:left; padding:5px 0 0 15px; font-size:20px; color:#f4f4f4;}
+		button {float:right; width:34px; height:34px; margin-right:15px; background:url(../image/btn/icoClose.png) 0 0 no-repeat;}
+	}
+	.pContent {
+		width:490px; margin:0 auto; background-color:#f4f4f4;
+		.inner {padding:20px;}
+	}
+}
+.projectInfo {
+	overflow:hidden;
+	dt, dd {float:left; padding:5px 0; font-size:13px; color:#8d8d8d;}
+	dt {width:25%; font-weight:bold;}
+	dd {
+		width:75%;
+		a {display:block; color:#8d8d8d;}
+		a:hover {color:#00a4f1;}
 	}
 }

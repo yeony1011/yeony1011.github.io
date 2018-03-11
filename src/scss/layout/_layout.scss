@@ -4,18 +4,19 @@ $width:960px;
 
 .img {
 	img {max-width:100%;}
+	&.max {max-width:25%;}
 }
 
 .flex {
 	display:flex;
-	&-left {justify-content:flex-start;}
-	&-right {justify-content:flex-end;}
-	&-center {justify-content:center;}
-	&-between {justify-content:space-between;}
-	&-around {justify-content:space-around;}
-	&-top {align-items:flex-start;}
-	&-bottom {align-item:flex-end;}
-	&-middle {align-items:center;}
+	&Left {justify-content:flex-start;}
+	&Right {justify-content:flex-end;}
+	&Center {justify-content:center;}
+	&Between {justify-content:space-between;}
+	&Around {justify-content:space-around;}
+	&Top {align-items:flex-start;}
+	&Bottom {align-item:flex-end;}
+	&Middle {align-items:center;}
 
 	&.between {justify-content:space-between;}
 }
