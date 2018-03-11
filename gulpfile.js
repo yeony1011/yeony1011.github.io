@@ -37,7 +37,7 @@ var reload = browserSync.reload;
         //proxy: "localhost"
         server: {
             baseDir: dist,
-            index: "./html/main/index.html"
+            index: "/html/main/index.html"
         },
         port:port,
             ui: {
