@@ -30,4 +30,28 @@ $(document).ready(function(){
             }
         }
     });
+
+    //portfolio hover
+    $(".grid-item").on("mouseover keyup", function(){
+        $(this).find(".overBox").css("display", "block");
+    });
+    $(".grid-item").on("mouseout", function(){
+        $(this).find(".overBox").css("display", "none");
+    });
+
+    //portfolio 해당팝업 열기
+    $(".overBox a").on("click keydown", function(){
+        var allCnt = $(".grid-item").length;
+        var number = $(this).parent().parent().index();
+        var nowNum = allCnt - number;
+        modalOpen("port"+nowNum);
+        return false;
+    });
+
+    //모달 닫기
+    $(".blockui").bind("click", function(){
+        modalClose();
+        $(".pop").hide();
+        $(".gnb").removeClass("on");
+    });
 });
