@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<include src="../include/head.html" title="포트폴리오"></include>
+</head>
+<body>
+<include src="../include/header.html"></include>
+<div id="container">
+	<!--masonry start-->
+	<div class="grid">
+		<div class="grid-item">
+			<a href="#this">1<br>내용</a>
+		</div>
+		<div class="grid-item">
+			<a href="#this">2<br>내용<br>내용<br>내용</a>
+		</div>
+		<div class="grid-item">
+			<a href="#this">3<br>내용내용내용<br>내용</a>
+		</div>
+		<div class="grid-item">
+			<a href="#this">4<br>내용내용<br>내용내용<br>내용내용<br>내용내용</a>
+		</div>
+		<div class="grid-item">
+			<a href="#this">5<br>내용<br>내용</a>
+		</div>
+		<div class="grid-item">
+			<a href="#this">6<br>내용<br>내용</a>
+		</div>
+		<div class="grid-item">
+			<a href="#this">7<br>내용<br>내용내용<br>내용</a>
+		</div>
+		<div class="grid-item">
+			<a href="#this">8<br>내용<br>내용내용<br>내용</a>
+		</div>
+		<div class="grid-item">
+			<a href="#this">9<br>내용</a>
+		</div>
+		<div class="grid-item">
+			<a href="#this">10<br>내용<br>내용<br>내용</a>
+		</div>
+	</div>
+	<!--masonry end-->
+</div>
+<include src="../include/footer.html"></include>
+<script>
+	$(document).ready(function(){
+		//카드 레이아웃 그리드
+		$(".grid").masonry({
+			itemSelector: '.grid-item',	//셀렉터
+			columnwidth: '.grid-item',	//컬럼 width를 셀렉터로 지정 혹은 숫자(px)가능
+			percentPosition: true,	//width를 퍼센트로
+			gutter: 10	//여백
+		});
+	});
+</script>
+</body>
+</html>

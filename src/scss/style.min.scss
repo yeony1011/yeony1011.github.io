@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+//공통
+@import "layout/colorset";		//색상
+@import "common/function";		//함수
+@import "common/mixin";			//믹스인
+@import "common/heading";		//타이틀
+@import "common/reset";			//리셋
+@import "common/button";		//버튼
+
+//외부파일
+@import "common/sprite";		//스프라이트
+
+//레이아웃
+@import "layout/space";			//여백
+@import "layout/table";			//테이블
+@import "layout/layout";		//레이아웃
+
+//페이지
+@import "layout/page";			//각 페이지

@@ -1,0 +1,36 @@
+{
+  "name": "yeon1011",
+  "version": "0.0.1",
+  "description": "portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-html-tag-include": "^1.0.1",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-minify": "^1.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-w3cjs": "^1.3.0",
+    "gulp.spritesmith": "^6.5.0",
+    "html-include": "0.0.1",
+    "image-min": "^0.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeony1011/yeony1011.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeony1011/yeony1011.github.io/issues"
+  },
+  "homepage": "https://github.com/yeony1011/yeony1011.github.io#readme"
+}

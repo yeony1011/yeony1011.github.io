@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+.main {
+  h1 {color: $white;}
+}
+
+.main {
+	position: fixed; top:0; left:0; width:100%; height:100%; z-index: 10;
+	.mainTit {
+		position: absolute; top:50%; left:50%; width:600px; height:300px; margin:-180px 0 0 -300px;
+		font-size:150px; font-weight:bold; color:$white; text-align:center; line-height:1;
+		i {
+			display: inline-block; font-size:150px; font-weight:bold; color:$white; line-height:1;
+			transform:rotateY(-180deg);
+		}
+	}
+}
+
+%bg {
+	position: absolute; top: 0; left: 0; width:100%; height:100%;
+	background-position:0 0; background-repeat:repeat; background-size: cover;
+}
+.bg1 {
+	@extend %bg; z-index: 1;
+	background-image: url(../image/img/star1.png);
+}
+.bg2 {
+	@extend %bg; z-index: 2; opacity: 0.75;
+	background-image: url(../image/img/star2.png);
+}
+
+.wrap {
+	.titBox {
+		margin-top:30px; padding-bottom:10px; border-bottom:2px solid $mint;
+		.largeTit {padding-bottom:5px; color:$mint; text-align:center;}
+		.txt {text-align:center;}
+	}
+}
+.section {
+	margin-top:50px;
+	.inBox {margin-top:10px;}
+	.textCont {margin-left:30px;}
+}
+
+.grid {
+	@include clearFix();
+	&-item {
+		display:inline-block; width:20%; margin-bottom:10px; border:1px solid #877a6b; border-radius:3px;
+		a {
+			display:block; transition:border-color .3s;
+			&:hover {border-color:#543b1e;}
+		}
+	}
+}

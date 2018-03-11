@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<include src="../include/head.html" title="메인"></include>
+</head>
+<body>
+	<include src="../include/header.html"></include>
+	<div id="container">
+		<div class="bg1"></div>
+		<div class="bg2"></div>
+		<section class="main">
+			<h1 class="mainTit"><i>S</i>EUNG YEON</h1>
+		</section>
+	</div>
+	<include src="../include/footer.html"></include>
+	<script>
+		$(document).ready(function () {
+			/* 메인 */
+			$(".bg1").plaxify({"xRange":10, "yRange":10});
+			$(".bg2").plaxify({"xRange":40, "yRange":40, "invert":true});
+			$(".main").plaxify({"xRange":20, "yRange":20});
+			$.plax.enable();
+		});
+	</script>
+</body>
+</html>

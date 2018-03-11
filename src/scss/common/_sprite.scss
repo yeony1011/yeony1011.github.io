@@ -1,0 +1,6 @@
+.icoLogo {
+	position:relative; display:inline-block; width: 89px; height: 39px; top:-1px;
+	background-image: url(../image/sprite.png); background-position:0px 0px;
+	@include txtHidden(); vertical-align:middle;
+	overflow:hidden; text-indent:-9999px; white-space:nowrap; line-height:0;
+}

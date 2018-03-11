@@ -1,0 +1,8 @@
+{{#sprites}}
+.{{name}} {
+	position:relative; display:inline-block; width: {{px.width}}; height: {{px.height}}; top:-1px;
+	background-image: url(../image/sprite.png); background-position:{{px.offset_x}} {{px.offset_y}};
+	@include txtHidden(); vertical-align:middle;
+	overflow:hidden; text-indent:-9999px; white-space:nowrap; line-height:0;
+}
+{{/sprites}}
