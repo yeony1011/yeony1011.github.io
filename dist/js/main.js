@@ -42,7 +42,7 @@ $(document).ready(function(){
     //portfolio 해당팝업 열기
     $(".overBox a").on("click keydown", function(){
         var allCnt = $(".grid-item").length;
-        var number = $(this).parent().parent().index();
+        var number = $(this).closest(".grid-item").index();
         var nowNum = allCnt - number;
         modalOpen("port"+nowNum);
         return false;
@@ -52,7 +52,6 @@ $(document).ready(function(){
     $(".blockui").bind("click", function(){
         modalClose();
         $(".pop").hide();
-        $(".gnb").removeClass("on");
     });
 });
 
@@ -64,11 +63,8 @@ function modalOpen(mtarget){
   var popHeight = _mtarget.height() + 7;
   var marginTop = iHeight/2 - popHeight/2;
   var popTop2 = $(document).scrollTop() + marginTop;
-  var _style = {
-    display : "block"
-  };
 
-  $(".blockui").css(_style);
+  $(".blockui").css("display", "block");
   _mtarget.css({
     "display" : "block",
     "top" : marginTop
