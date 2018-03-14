@@ -1,0 +1,134 @@
+.hide {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+.link span,
+.btn span {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
+h1 {
+  width: 129px;
+  height: 23px;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+h1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bg/bg_logo.png) 0 0 no-repeat;
+  background-size: 129px 23px;
+}
+nav {
+  overflow: hidden;
+  width: 257px;
+  margin: 12px auto 0;
+}
+nav li {
+  float: left;
+}
+nav li:nth-child(2) {
+  padding: 0 16px;
+}
+nav li:nth-child(1) a {
+  background-position: 0 1px;
+}
+nav li:nth-child(2) a {
+  background-position: 0 -95px;
+}
+nav li:nth-child(3) a {
+  background-position: 0 -191px;
+}
+nav li a {
+  display: block;
+  width: 75px;
+  height: 75px;
+  background-image: url(../images/bg/bg_nav.png);
+  background-repeat: no-repeat;
+  background-size: 75px auto;
+}
+nav li a.selected {
+  height: 80px;
+}
+nav li:nth-child(1) a.selected {
+  background-position: 0 -287px;
+}
+nav li:nth-child(2) a.selected {
+  background-position: 0 -388px;
+}
+nav li:nth-child(3) a.selected {
+  background-position: 0 -488px;
+}
+.title_box {
+  padding-top: 12px;
+}
+.title_box h2 {
+  padding-left: 15px;
+  /*.font_nb11();*/
+  color: #484e56;
+  background: url(../images/bullet/bullet_tit.png) 0 2px no-repeat;
+  background-size: 11px auto;
+}
+.title_box p {
+  padding-top: 6px;
+  /*.font_nb10();*/
+  color: #666;
+  letter-spacing: -0.05em;
+}
+.guide_box {
+  padding: 10px 0 9px;
+}
+.img_box img {
+  max-width: 100%;
+}
+.explain_txt {
+  overflow: hidden;
+  padding-top: 10px;
+}
+.explain_txt dt:first-of-type,
+.explain_txt dd:first-of-type {
+  margin-top: 0;
+}
+.explain_txt dt {
+  display: inline-block;
+  float: left;
+  width: 51px;
+  height: 17px;
+  margin-right: 5px;
+  margin-top: 6px;
+  border-radius: 25px;
+  /*.font_nb10();*/
+  color: #fff;
+  line-height: 17px;
+  text-align: center;
+  background: -webkit-linear-gradient(#92af24, #77970f);
+  background: -o-linear-gradient(#92af24, #77970f);
+  background: -moz-linear-gradient(#92af24, #77970f);
+  background: linear-gradient(#92af24, #77970f);
+}
+.explain_txt dd {
+  display: inline-block;
+  float: left;
+  width: 204px;
+  margin-top: 6px;
+  /*.font_nb10();*/
+  color: #666;
+  line-height: 17px;
+  letter-spacing: -0.1em;
+}
+.btn_box {
+  background-color: #333;
+}

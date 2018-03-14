@@ -1,0 +1,277 @@
+/*
+ * Base structure
+ */
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {padding-top: 60px; font-family: "NanumGothic", 나눔고딕, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+
+/* 기본 input */
+.default-input {padding:6px 12px; border-radius: 4px; border:1px solid #d4d4d4;}
+
+/* 공통 width */
+.w_138 {width:138px !important;}
+.w_598 {width:598px !important;}
+.w_98 {width:98px !important;}
+.w_100p {width:100% !important;}
+
+/* 공통 여백 */
+.pt_0 {padding-top:0px !important;}
+.mt_20 {margin-top:20px;}
+.mb_20 {margin-bottom:20px;}
+.ml_40 {margin-left:40px;}
+
+/*
+ *  공통사용 FORM
+ */
+
+select, input[type="file"]{height:30px; line-height: 30px; background-color: #fff; border: 1px solid #ddd; border-radius: 0;}
+
+/* hidden */
+.hide { 
+    display:block; overflow:hidden; position:absolute; top:0; left:0; z-index:-1;
+    width:0; height:0;
+}
+
+/*
+ * Placeholder dashboard ideas
+ */
+.placeholders {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.placeholders h4 {
+  margin-bottom: 0;
+}
+.placeholder {
+  margin-bottom: 20px;
+}
+.placeholder img {
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.sub-header {padding-bottom: 10px; border-bottom: 1px solid #eee;}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {border: 0;}
+
+
+/*
+ * 테이블 기본 스타일
+ */
+
+ .tb_default{margin: 20px 0; border-top: 2px solid #ddd; background: #fff;}
+ .tb_default th{text-align: right; margin-right: 20px; vertical-align: middle !important;}
+ .tb_default td{vertical-align: middle !important;}
+ .tb_default label{margin-left: 5px; margin-right: 10px;}
+
+
+
+
+
+@media (min-width: 768px) {
+	.sidebar {
+		position: fixed;
+		top: 60px;
+		bottom: 0;
+		left: 0;
+		width:200px;
+		z-index: 1000;
+		display: block;
+		/*padding: 20px;*/
+		/*overflow-x: hidden;*/
+		/*overflow-y: auto;*/ /* Scrollable contents if viewport is shorter than content. */
+		background-color: #2a3542;
+		border-right: 1px solid #eee;
+	}
+	/* Sidebar navigation */
+	.nav-sidebar {
+		/*margin-right: -21px;*/ /* 20px padding + 1px border */
+		/*margin-bottom: 20px;*/
+		/*margin-left: -20px;*/
+	}
+	.nav-sidebar > li > a {
+		padding:15px 0 15px 20px;
+		border-bottom:1px solid #35404e;
+		background:#2a3542;
+		font-size:12px;
+		color:#aeb2b7;
+		line-height:14px;
+	}
+	.nav-sidebar > li > a > .nav-label {
+		font-size:12px;
+		color:#aeb2b7;
+		line-height:14px;
+	}
+	.nav-sidebar > li > a.active,
+	.nav-sidebar > li > a:hover,
+	.nav-sidebar > li > a:hover.active,
+	.nav-sidebar > li > a:focus.active {
+		color: #5ab1ff; background: #27313d;
+	}
+	.nav-sidebar > li > a > span {padding-right:25px;}
+	.nav-sidebar > li.dropdown > ul {
+		margin-left:-40px;
+	}
+	.nav-sidebar > li.dropdown > ul > li {
+		list-style:none;
+	}
+	.nav-sidebar > li.dropdown > ul > li > a {
+		display:block;
+		padding:12px 0 12px 60px;
+		text-decoration:none;
+		background:#27313d;
+		font-size:12px;
+		color:#aeb2b7;
+		line-height:14px;
+	}
+	.nav-sidebar > li.dropdown > ul > li > a.active,
+	.nav-sidebar > li.dropdown > ul > li > a:hover,
+	.nav-sidebar > li.dropdown > ul > li > a:hover.active,
+	.nav-sidebar > li.dropdown > ul > li > a:focus.active {
+		color:#fff; background:#348fe2;
+	}
+
+	.nav-sidebar > li.dropdown > a {
+		background:#27313d url("../images/lnb_arrow_off.gif") 185px 19px no-repeat !important;
+	}
+	.nav-sidebar > li.dropdown.open {border-left:3px solid #348fe2; border-bottom:1px solid #35404e;}
+	.nav-sidebar > li.dropdown.open > a {
+		padding:15px 0 15px 17px;
+		border:none;
+		background:#27313d url("../images/lnb_arrow_on.gif") 179px 21px no-repeat !important;
+	}
+
+	.nav-sidebar > li > .dropdown-menu02 {display:none;}
+	.open > .dropdown-menu02 {display:block !important;}
+
+	.main {
+		margin-left:200px; padding: 25px 40px;		
+		background:#f4f4f4 url("../images/bg_main.png") left top repeat-x;
+	}
+
+	.footer {margin-left:200px; padding:14px 0 12px 40px; border-top:1px solid #d4d4d4; background:#f4f4f4; font-size:13px; color:#444;}
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+	.sidebar {
+		position: fixed;
+		top: 60px;
+		bottom: 0;
+		left: 0;
+		width:60px;
+		z-index: 1000;
+		display: block;
+		background-color: #2a3542;
+		border-right: 1px solid #eee;
+	}
+	/* Sidebar navigation */
+	.nav-sidebar > li > a {
+		padding:15px 0 15px 20px;
+		border-bottom:1px solid #35404e;
+		background:#2a3542;
+		font-size:12px;
+		color:#aeb2b7;
+		line-height:14px;
+	}
+	.nav-sidebar > li > a > .nav-label {
+		display:none; position:absolute; top:0; left:56px; min-width:180px;
+		padding:15px 0 16px 40px;
+		background:#27313d url("../images/lnb_arrow_on.gif") 160px 21px no-repeat;
+		font-size:12px;
+		color:#aeb2b7;
+		line-height:14px;
+	}
+	.nav-sidebar > li > a.active,
+	.nav-sidebar > li > a:hover,
+	.nav-sidebar > li > a:hover.active,
+	.nav-sidebar > li > a:focus.active {
+		color: #5ab1ff; background: #27313d;
+	}
+	.nav-sidebar > li > a > span {padding-right:25px;}
+	.nav-sidebar > li.dropdown > ul {margin:0; padding:0;}
+	.nav-sidebar > li.dropdown > ul > li {list-style:none;}
+	.nav-sidebar > li.dropdown > ul > li > a {
+		display:block;
+		min-width:180px;
+		padding:13px 0 13px 40px;
+		text-decoration:none;
+		background:#27313d;
+		font-size:12px;
+		color:#aeb2b7;
+		line-height:14px;
+	}
+	.nav-sidebar > li.dropdown > ul > li > a.active,
+	.nav-sidebar > li.dropdown > ul > li > a:hover,
+	.nav-sidebar > li.dropdown > ul > li > a:hover.active,
+	.nav-sidebar > li.dropdown > ul > li > a:focus.active {
+		color:#fff; background:#348fe2;
+	}
+
+	.nav-sidebar > li.dropdown > a {background:#27313d url("../images/lnb_arrow_off.gif") 185px 19px no-repeat !important;}
+	.nav-sidebar > li.dropdown.open {border-left:3px solid #348fe2; border-bottom:1px solid #35404e;}
+	.nav-sidebar > li.dropdown.open > a {
+		padding:15px 0 15px 17px; border:none;
+		background:#27313d url("../images/lnb_arrow_on.gif") 179px 21px no-repeat !important;
+	}
+
+	.nav-sidebar > li > .dropdown-menu02 {display:none;}
+	.open > .dropdown-menu02 {display:block !important; position:absolute; top:45px; left:56px;}
+
+	.main {
+		margin-left:60px; padding: 25px 40px;
+		background:#f4f4f4 url("../images/bg_main.png") left top repeat-x;
+	}
+
+	.footer {margin-left:60px; padding:14px 0 12px 40px; border-top:1px solid #d4d4d4; background:#f4f4f4; font-size:13px; color:#444;}
+}
+
+/*
+ * Main content
+ */
+ .main {
+	margin-left:200px; padding: 25px 40px;
+	background:#f4f4f4 url("../images/bg_main.png") left top repeat-x;
+}
+.main .page-header {
+  margin-top: 0;
+}
+.main-small {
+	margin-left:60px;
+}
+.footer {margin-left:200px; padding:14px 0 12px 40px; border-top:1px solid #d4d4d4; background:#f4f4f4; font-size:13px; color:#444;}
+.footer-small {margin-left:60px; padding:14px 0 12px 40px; border-top:1px solid #d4d4d4; background:#f4f4f4; font-size:13px; color:#444;}
+
+
+/* 타이틀 */
+.page-tit {margin:0; background:url("../images/bg_page_tit.png") 138px 7px no-repeat; font-size:24px;}
+
+/* form 감싸는 div */
+.form_box {padding:20px 25px; border: 1px solid #d4d4d4; border-top:1px solid #35404e; background-color:#fff;}
+.form_group {margin-top:10px;}
+.form_group:first-child {margin-top:0;}
+.form_group > label.tit {width:70px; font-family: NanumGothic, 나눔고딕, "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal;}
+.form_group > label.tit02 {width:46px; font-family: NanumGothic, 나눔고딕, "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight: normal;}
+.form_group > button {margin-left:5px; vertical-align:top;}
+
+/* select */
+.btn-group .btn-select {border:1px solid #ccc; background-color:#fff; text-align: left;}
+
+/* select option */
+.dropdown-menu {margin:0;}
+
+/*검색결과 text*/
+.search_result {padding-left:27px; background:url("../images/bg_search_result.png") 0 0 no-repeat; font-family: NanumGothic, 나눔고딕, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+.txt_bule {color:#348fe2;}
+
+/* 로그인 box */
+.login_box {overflow:hidden; width:600px; margin:300px auto 0;}
+
+/* 임시 버튼 box */
+.buttons_area {overflow:hidden;}
+.buttons_area strong {display:block;}
+
+/* paging box */
+.paging_area {overflow:hidden;}

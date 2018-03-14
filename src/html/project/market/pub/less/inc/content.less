@@ -1,0 +1,98 @@
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+//common
+.hide {display: block; overflow: hidden; position: absolute; top: 0; left: 0; z-index: -1; width: 0; height: 0;}
+
+.link, .btn{
+	span{.hide;}
+}
+
+h1 {width: 129px; height: 23px; margin: 0 auto; padding-top: 16px;
+	a {display: block; width: 100%; height: 100%; background: url(../images/bg/bg_logo.png) 0 0 no-repeat; background-size: 129px 23px;}
+}
+nav {
+	overflow: hidden; width: 100%; margin-top: 12px;
+	li {
+		float: left; width: 33%;
+		&:nth-child(2) {width: 34%;}
+
+		&:nth-child(1) a {background-position: 0 1px;}
+		&:nth-child(2) a {background-position: 0 -95px;}
+		&:nth-child(3) a {background-position: 0 -190px;}
+		a {display: block; width: 75px; height: 75px; margin: 0 auto; background-image: url(../images/bg/bg_nav.png); background-repeat: no-repeat; background-size: 75px auto;}
+		
+		a.selected {height: 80px;}
+		&:nth-child(1) a.selected {background-position: 0 -285px;}
+		&:nth-child(2) a.selected {background-position: 0 -385px;}
+		&:nth-child(3) a.selected {background-position: 0 -485px;}
+	}
+}
+
+
+//intro
+.intro_wrap {
+	.conview {
+		position: relative;
+		span {.hide();}
+		h2 {
+			position: absolute; top: 0; left: 50%; width: 220px; height: 83px; margin-left: -110px; padding-left: 0;
+			background: url(../images/tit/tit_intro01.png) 0 0 no-repeat; background-size: 220px auto;
+		}
+		p {position: absolute; top: 117px; left: 50%; margin-left: -26px; width: 123px; height: 32px; background: url(../images/tit/tit_intro02.png) 0 0 no-repeat; background-size: 123px 32px;}
+	}
+	.btn_box {}
+}
+
+
+//sub
+//타이틀과 설명글 포함한 타이틀박스
+.title_box {
+	padding-top: 12px;
+	h2 {padding-left: 15px; .font_nb13(); color: #484e56; background: url(../images/bullet/bullet_tit.png) 0 2px no-repeat; background-size: 11px auto;}
+	p {padding-top: 6px; .font_nb11(); color: #666; letter-spacing: -0.05em;}
+}
+.guide_box {padding: 10px 0 9px;}
+.img_box {
+	position: relative; border-radius: 3px; text-align: center;
+	> img {width: 100%;}
+}
+.expand {
+	position: absolute; bottom: 9px; right: 13px;
+	img {width: 41px; height: 41px;}
+}
+.explain_txt {
+	overflow: hidden; padding-top: 10px;	
+	dt:first-of-type, dd:first-of-type {margin-top: 0;}
+	dt {
+		display: inline-block; float: left; width: 17%; height: 17px; margin-right: 2%; /*margin-right: 5px;*/ margin-top: 6px; border-radius: 25px;
+		.font_nb11(); color: #fff; line-height: 17px; text-align: center;
+		background: -webkit-linear-gradient(#92af24, #77970f);
+		background: -o-linear-gradient(#92af24, #77970f);
+		background: -moz-linear-gradient(#92af24, #77970f);
+		background: linear-gradient(#92af24, #77970f);
+		clear: left;
+	}
+	dd {display: inline-block; float: left; width: 81%; margin-top: 6px; .font_nb11(); color: #666; line-height: 17px; letter-spacing: -0.1em;}
+}
+
+//행사안내 리스트
+.event_list {
+	overflow: hidden;
+	ul {overflow: hidden;}
+	li {
+		width: 48%; padding: 2% 0;
+		a {display: block;}
+	}
+	li:nth-child(even) {float: right;}
+	li:nth-child(odd) {float: left;}
+}
+
+//팝업
+.block_modal {display: none; position: absolute; top: 0; right: 0; left: 0; bottom: 0; background-color: #000; opacity: 0.7;}
+.pop {
+	display: none; overflow: hidden; position: absolute; top:0; right: 0; bottom: 0; left: 0; border: 3px solid #555; background-color: #fff;
+	.closebox {
+		position: absolute; top: 15px; right: 13px; width: 31px; height: 31px; z-index: 20;
+		button {width: 31px; height: 31px; background: url(../images/btn/btn_close.png) 0 0 no-repeat; background-size: 31px 31px;}
+	}
+	.imgbox {width: 100%; clear: both;}
+}

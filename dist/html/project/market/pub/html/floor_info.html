@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="../css/common.css" />
+		<title>서울시농수산식품공사</title>
+		<script src="../js/jquery-1.10.0.min.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  		<script src="../js/jquery.ui.touch-punch.min.js"></script>
+  		<script src="../js/ui.js"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<header>
+				<div>
+					<h1><a href="#" class="link"><span>서울시농수산식품공사</span></a></h1>
+					<nav>
+						<ul>
+							<li><a href="event_list.html" class="link"><span>행사안내</span></a></li>
+							<li><a href="floor_info.html" class="link selected"><span>층별안내</span></a></li>
+							<li><a href="convenient.html" class="link"><span>편의시설</span></a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+		
+			<div id="content">
+				<section class="conview contwo">
+					<div class="title_box">
+						<h2>층별안내</h2>
+						<p>원하시는 층을 선택하시면 각 층의 정보를 확인하실 수 있습니다.</p>
+					</div>
+
+					<div class="guide_box">
+						<div class="img_box">
+							<img src="../images/img/img_3f.jpg" alt="3층 안내 이미지" />
+							<div class="expand"><button type="button" onclick="modalOpen('zoom');"><img src="../images/btn/btn_expand.png" alt="확대" /></button></div>
+						</div>
+					</div><!-- //guide_box -->
+				</section><!-- //conview -->
+
+				<section class="btn_box">
+					<div class="floor">
+						<button type="button">1F</button>
+						<button type="button">2F</button>
+						<button type="button" class="selected">3F</button>
+						<button type="button">B1F</button>
+						<button type="button">B2F</button>
+						<button type="button">B3F</button>
+					</div>
+					<div class="allview">
+						<button type="button">전체보기</button>
+					</div>
+				</section><!-- //btn_box -->
+			</div><!-- //content -->
+
+		</div><!-- //wrap -->
+
+		<div class="block_modal"></div>
+		<div class="pop zoom">
+			<div class="closebox"><button type="button" class="btn" onclick="modalClose('zoom');"><span>닫기</span></button></div>
+			<div class="imgbox ui-widget-content"><img src="../images/img/img_3f.jpg" alt="3층 안내 이미지" /></div>
+		</div><!-- //pop -->
+	</body>
+</html>

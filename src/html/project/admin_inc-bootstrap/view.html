@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="funnypeople admin tool layout">
+    <meta name="author" content="funnypeople">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>퍼니피플 어드민 페이지</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+		      <!-- <button type="button" id="main-menu-toggle" class="btn_menu" data-toggle="collapse" data-target="#sidebar" aria-expanded="false" aria-controls="navbar"><span class="hide">menu</span></button> -->
+          <button type="button" class="btn_menu"><span class="hide">menu</span></button>
+          <a class="navbar-brand" href="#"><span class="hide">FUNNYPEOPLE</span></a>
+    		  <ul class="gnb">
+    		  	<li class="about"><a href="#">About</a></li>
+    		  	<li class="contact dropdown">
+              <a href="#" class="child_menu dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Contact</a>
+              <ul class="dropdown-menu dropdown-menu03" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+              </ul>
+            </li>
+    		  </ul>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <form class="navbar-form navbar-right">
+            <input type="text" class="form-control input_search" placeholder="Search">
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="profile"><span class="hide">Profile</span></a></li>
+            <li><a href="#" class="dashboard"><span class="hide">Dashboard</span></a><span class="label label-warning02"><span class="arrow"></span>16</span></li>
+            <li><a href="#" class="settings"><span class="hide">Settings</span></a></li>
+            <li><a href="#" class="help"><span class="hide">Help</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+        <!-- <div id="sidebar" class="sidebar" role="navigation" aria-expanded="false"> -->
+        <div id="sidebar" class="sidebar">
+
+          <div class="user_box">
+            <img src="images/img_default.jpg" alt="이미지" />
+            <span class="user_info">
+              <span class="user_txt">Hello!</span>
+              <span class="user_id">funnypeople</span>
+            </span>
+          </div><!-- //user_box -->
+
+          <ul class="nav nav-sidebar">
+            <li><a href="#"><span class="glyphicon glyphicon-dashboard" aria-hidden="true"></span><span class="nav-label">Dashboard</span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-inbox" aria-hidden="true"></span><span class="nav-label">Inbox</span></a><span class="label label-warning03">16</span></li>
+            <li class="dropdown">
+              <a href="#" class="active dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-signal" aria-hidden="true"></span><span class="nav-label">Graphs</span></a>
+              <ul class="dropdown-menu02" role="menu">
+                <li><a href="#">Flot Chart</a></li>
+                <li><a href="#">Morris Charts</a></li>
+                <li><a href="#">Inline Charts</a></li>
+                <li><a href="#">Dygraphs</a></li>
+              </ul>
+            </li>
+            <li><a href="#"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span><span class="nav-label">Tables</span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span><span class="nav-label">Forms</span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span><span class="nav-label">UI Elements</span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><span class="nav-label">Calendar</span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span><span class="nav-label">Widgets</span></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span><span class="nav-label">Gallery</span></a></li>
+          </ul><!-- //nav nav-sidebar -->
+        </div><!-- //sidebar -->
+
+        <div class="main">
+          <h1 class="page-tit">원장동정</h1>
+
+          <table class="table tb_default">
+            <colgroup>
+              <col width="15%">
+              <col width="35%">
+              <col width="15%">
+              <col width="35%">
+            </colgroup>
+            <tbody>
+              <tr>
+                <th>출처</th>
+                <td><input type="text"></td>
+                <th>등록일</th>
+                <td>
+                  <select name="" id="year">
+                    <option value="">2014</option>
+                  </select>
+                  <label for="">년</label>
+                  <select name="" id="">
+                    <option value="month">3</option>
+                  </select>
+                  <label for="month">월</label>
+                  <select name="" id="day">
+                    <option value="">31</option>
+                  </select>
+                  <label for="day">일</label>
+                </td>
+              </tr>
+              <tr>
+                <th>제목</th>
+                <td colspan="3"><input type="text"></td>
+              </tr>
+              <tr>
+                <th>내용</th>
+                <td colspan="3"><textarea name="" id="" cols="30" rows="10" class="w_100p"></textarea></td>
+              </tr>
+              <tr>
+                <th>입력형식</th>
+                <td>
+                  <input type="radio" id="html"><label for="html">html</label>
+                  <input type="radio" id="text"><label for="text">text</label>
+                </td>
+                <th>등록일</th>
+                <td>
+                  <input type="radio" id="ready"><label for="ready">게시</label>
+                  <input type="radio" id="readn"><label for="readn">게시하지 않음</label>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="buttons_area ">
+            <p class="text-center">
+              <button type="button" class="btn btn-primary">저장</button>
+              <button type="button" class="btn btn-default">취소</button>
+            </p>
+          </div>
+
+
+        </div><!-- //main -->
+    		<footer class="footer">
+    			© funnypeople 2014
+    		</footer>
+    </div><!-- //container-fluid -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+  	<script>
+      $(document).ready(function () {
+        /* sidebar lnb 기능 */
+        $('.dropdown-toggle').dropdown()
+
+        /* sidebar width 변경 */
+        // $(".menu, .menu > li").mouseleave(function () {
+        //     $(".menu li ul").slideUp();
+        //     $(".menu.menu-small li ul").slideUp();
+        // });
+        
+        $(".dropdown > .active").click(function () {
+          if($("#sidebar").hasClass("sidebar-small")){
+            if($(".dropdown").hasClass("open")){
+              $(this).children(".nav-label").css("display", "block");
+            }else{
+              $(this).children(".nav-label").css("display", "none");
+            }
+          }else{
+            $(this).children(".nav-label").css("display", "inline");
+
+          }
+        });
+
+        if ($(window).width() < 768) {
+          $(".sidebar").addClass("sidebar-small");
+          $(".main").addClass("main-small");
+        }
+
+        $(window).resize(function () {
+          if ($(window).width() <= 767) {
+            $(".sidebar").addClass("sidebar-small");
+            $(".main").addClass("main-small");
+          }
+          if ($(window).width() >= 767) {
+            $(".sidebar").removeClass("sidebar-small");
+            $(".main").removeClass("main-small");
+          }
+        });
+
+        $(".btn_menu").click(function () {
+          $(".sidebar").toggleClass("sidebar-small");
+          $(".main").toggleClass("main-small");
+          $(".footer").toggleClass("footer-small");
+          $(".dropdown .nav-label").attr("style", "");
+         });
+
+        $(document).mouseup(function(e){
+          var container   = $(".nav-label")
+          if(container.has(e.target).length === 0)
+            container.attr("style", "");
+        }); 
+
+      });
+  	</script>
+  </body>
+</html>

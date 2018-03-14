@@ -1,0 +1,56 @@
+//ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+//btn
+.btn_box {
+	overflow: hidden; position: fixed; bottom: 0; left: 0; right: 0; padding: 9px 3% 8px; background-color: #333; text-align: center;
+	a, button {
+		display: inline-block; width: 50px; padding: 11px 15px 12px;
+		border-bottom: 1px solid #3f3f3f; border-radius: 5px;
+		
+		-moz-box-shadow: inset 0 0 3px #615f5f;
+   		-webkit-box-shadow: inset 0 0 3px #615f5f;
+   		box-shadow: inset 0 0 3px #615f5f;
+
+		background: -webkit-linear-gradient(#484747, #333333);
+		background: -o-linear-gradient(#484747, #333333);
+		background: -moz-linear-gradient(#484747, #333333);
+		background: linear-gradient(#484747, #333333);
+		.font_nb11(); color: #fff; text-align: center; text-shadow: 1px 1px #363535;
+	}
+	&.both_sides {
+		a:first-child, button:first-child {float: left;}
+		a:last-child, button:last-child {float: right;}
+	}
+	.selected {border: 1px solid #3e3e3e; background: #1f80d5; text-shadow: 1px 1px #196eb9; box-shadow: none;}
+}
+//이전버튼
+.prev {text-align: left;
+	span{display: block; padding-left: 19px; .font_nb11(); color: #fff;
+		background-image: url(../images/btn/btn_prev.png); background-position: left 1px; background-repeat: no-repeat; background-size: 12px auto;
+	}
+}
+//다음버튼
+.next {text-align: left;
+	span{display: block; padding-right: 19px; .font_nb11(); color: #fff;
+		background-image: url(../images/btn/btn_next.png); background-position: right 1px; background-repeat: no-repeat; background-size: 12px auto;
+	}
+}
+//더보기버튼
+.more {width: 100% !important; border-top: 2px solid #3588cf; border-radius: 0 0 5px 5px !important;}
+
+//다시보지않기버튼
+.again_no {/*position: absolute; top: 50%; left: 3%; margin-top: -19px;*/width: 110px !important; border: 1px solid #3e3e3e; background: #1f80d5 !important; text-shadow: 1px 1px #196eb9 !important; box-shadow: none !important;}
+.close {/*position: absolute; top: 50%; right: 3%; margin-top: -19px;*/ width: 80px !important; padding: 11px 0 12px !important;}
+
+//층버튼 박스
+.floor {
+	float: left; width: 75%; text-align: left;
+	button {width: 30% !important; padding: 9px 0 10px; margin-right: 2%;}
+	button:nth-child(3n) {margin-right: 0;}
+	button:nth-child(1), button:nth-child(2), button:nth-child(3) {margin-bottom: 3px;}
+}
+
+//전체보기버튼 박스
+.allview {
+	float: right; width: 23%; margin-left: 2%;
+	button {width: 100% !important; padding: 27px 0 28px;}
+}
